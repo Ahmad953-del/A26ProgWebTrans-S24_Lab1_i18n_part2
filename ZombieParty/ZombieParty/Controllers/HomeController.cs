@@ -19,11 +19,14 @@ namespace ZombieParty.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Title"] = _localizer["HomeIndexTitle"];
             return View();
         }
 
         public IActionResult Privacy()
         {
+            // Passez l'information du titre de la View Privacy via le ViewBag
+            ViewBag.Title = _localizer["PrivacyTitle"];
             return View();
         }
 
